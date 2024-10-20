@@ -1,4 +1,3 @@
-import './App.css'
 import MainLayout from './layouts/MainLayout/index.tsx'
 import { Suspense, useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -40,13 +39,13 @@ function App () {
   const [ router ] = useState( getBrowserRouter( routes ) )
 
   return (
-    <MainLayout>
-      <div className="app w-full flex-1 flex justify-center">
+    <>
+      <div className="app w-full">
         <RouterProvider router={ router }/>
       </div>
       <div className="modal">
       </div>
-    </MainLayout>
+    </>
   )
 }
 

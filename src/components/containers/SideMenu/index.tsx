@@ -13,7 +13,7 @@ export default function SideMenu () {
     <ul className="side-menu-list w-56 bg-white h-full shadow-xl flex flex-col gap-4 p-4 z-50">
       {
         menus && menus.map( ( { name } ) =>
-          <li className="cursor-pointer text-center">{ name }</li>
+          <li className="cursor-pointer text-center hover:bg-gray-200 rounded-md">{ name }</li>
         )
       }
     </ul>

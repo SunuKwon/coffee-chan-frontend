@@ -20,15 +20,15 @@ export default function Home () {
             Array.from( { length: totalRows }, ( _, rowIndex ) => (
               <tr key={ rowIndex }>
                 { paddedItems.slice( rowIndex * 10, ( rowIndex + 1 ) * 10 ).map( ( item, index ) => (
-                  <td className="cursor-pointer hover:bg-red-200 active:bg-red-400" key={ index }>
-                    <div
-                      className="text-sm content-center h-16"
-                    >
+                    <td className="cursor-pointer hover:bg-red-200 active:bg-red-400" key={ index }>
                       <NavLink to={`items/${item.id}`}>
-                        { item.name }
+                        <div
+                          className="text-sm content-center h-16"
+                        >
+                          { item.name }
+                        </div>
                       </NavLink>
-                    </div>
-                  </td>
+                    </td>
                 ) ) }
               </tr>
             ) )

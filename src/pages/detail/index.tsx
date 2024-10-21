@@ -63,7 +63,8 @@ export default function Detail () {
             Zhi kou bei (hong) cheng fen: hong ni yuan kuang (fen bu zai yi xing de huang long shan),<br/>
             yang hua tie, gao ling tu, shi ying deng<br/>
             직구간(홍색)성분:니원광의흥시황릉산에분포),양화철,고령토석영 등<br/>
-            生工开果一民化两年加工堤陶瓷→全手工制作一一周- Sheng chan gong yi kai cai-feng hua liang nian jia gong ti<br/>
+            生工开果一民化两年加工堤陶瓷→全手工制作一一周- Sheng chan gong yi kai cai-feng hua liang nian jia gong
+            ti<br/>
             lian cheng tao ci→ quan shou gong zhi zuo yin zan yi zhou<br/>
             제조공정도 개통화이후도자기수용으로제작진주동안 건조<br/>
             拱干进宿一溫度1300氏度36小时后冷置一出一<br/>

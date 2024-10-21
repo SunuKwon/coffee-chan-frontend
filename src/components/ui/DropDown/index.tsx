@@ -15,7 +15,7 @@ export default function DropDown( props: DropDownProps ) {
   return (
     <div className={ `${ className } drop-down cursor-pointer` }>
       <div className="flex h-full" onClick={ () => setActive( !active ) }>
-        <div className="pl-2">
+        <div className="pl-3 text-center">
           { source.find( ( { value } ) => input === value )?.name || placeholder }
         </div>
         <i className="mdi mdi-menu-down ml-auto bg-red-600 text-white"/>

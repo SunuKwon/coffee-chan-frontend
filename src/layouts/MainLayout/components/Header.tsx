@@ -2,7 +2,7 @@
 export default function Header () {
 
   return (
-    <div className="header-container flex gap-12 items-center justify-center h-20 bg-[#009DFAFF] text-white shadow-xl z-[100]">
+    <div className="header-container flex gap-12 items-center justify-center bg-[#009DFAFF] text-white shadow-xl z-[100]" style={ { height: '80px', flexShrink: 0 } }>
       <div className="header-title text-5xl cursor-pointer">www.owetp.com</div>
       <div className="header-description text-left select-none">
         <p>클릭 한번으로 수출입 시장을 안정하고 설계 거래가 가능한</p>

@@ -4,7 +4,7 @@ import Purchase from '../pages/purchase'
 
 export const routes = [
   { path: 'items/:id', element: <Items/> },
-  { path: 'items/:id/detail', element: <Detail/> },
-  { path: 'items/:id/detail/purchase', element: <Purchase/> },
+  { path: 'detail/:id', element: <Detail/> },
+  { path: '/detail/:id/purchase', element: <Purchase/> },
   { path: 'item' },
 ]

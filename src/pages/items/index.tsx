@@ -37,7 +37,7 @@ export default function Items () {
                   onClick={ () => setSelectItem( idx ) }
                 >
                   <div className="item cursor-pointer">
-                    <img src={ `/image/coffee_${ String( idx + 1 ) }.png` } className="w-full h-44 w-80 object-cover rounded-xl" />
+                    <img src={ `/image/${ model?.name }.png` } className="w-full h-44 w-80 object-cover rounded-xl" />
                   </div>
                   <div className="flex justify-center">{ `model name : ${ model?.name }` }</div>
                 </div>
@@ -52,7 +52,7 @@ export default function Items () {
 
                 return
               }
-              navigator( 'detail', { state: { title: models[ selectItem ]?.name } } )
+              navigator( `/detail/${ models[ selectItem ]?.name.toLowerCase() }`, { state: { title: models[ selectItem ]?.name } } )
             } }
           >
             실시간 품질검증 확인

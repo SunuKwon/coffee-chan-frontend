@@ -1,7 +1,8 @@
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import PageLayout from '../../layouts/PageLayout'
 
 export default function Detail () {
+  const { id } = useParams()
   const location = useLocation()
   const { title } = location.state || {}
 
@@ -16,7 +17,7 @@ export default function Detail () {
             <div className="mr-3 w-80">
               <div className="item">
                 <img
-                  src={ `/image/coffee_1.png` }
+                  src={ `/image/${ id }.png` }
                   className="w-full h-44 object-cover rounded-xl"
                 />
               </div>
@@ -48,45 +49,27 @@ export default function Detail () {
             </div>
           </div>
           <div className="font-bold text-lg py-2">상세내용</div>
-          <div className="border border-solid p-4 text-sm">
+          <div className="border border-solid p-4 text-sm whitespace-pre-line">
             수출시 자동
-
-            HS NO 6911-10-1000
-
-            수출후 부가세 환급 13% 성분표 및 제조 공정도
-
+            HS NO 6911-10-1000<br/>
+            수출후 부가세 환급 13% 성분표 및 제조 공정도<br/>
             宜兴市丁蜀镇圣陶砂陶瓷店
-
-            Yi xing shi ding shu zhen sheng tao sha tao ci dian
-
-            의흥시정진성도 사도 자점(도업)
-
-            直口杯成分,加工工艺
-
-            Zhi kou bei cheng fen, jia gong gong yi
-
-            직구 잔(집)성분,가공공예
-
-            直口杯 (紅) 成分:紅視原可(分布在宜兴的黃龙山),氧化铁,高的主,石英等
-
-            Zhi kou bei (hong) cheng fen: hong ni yuan kuang (fen bu zai yi xing de huang long shan),
-
-            yang hua tie, gao ling tu, shi ying deng
-
-            직구간(홍색)성분:니원광의흥시황릉산에분포),양화철,고령토석영 등
-
-            生工开果一民化两年加工堤陶瓷→全手工制作一一周- Sheng chan gong yi kai cai-feng hua liang nian jia gong ti lian cheng tao ci→ quan shou gong zhi zuo yin zan yi zhou
-
-            제조공정도 개통화이후도자기수용으로제작진주동안 건조
-
-            拱干进宿一溫度1300氏度36小时后冷置一出一
-
-            Hongganjin yaowen du1300he shi du 36 xino shi hou
-
-            long zhi
-
-            chu chang
-
+            Yi xing shi ding shu zhen sheng tao sha tao ci dian<br/>
+            의흥시정진성도 사도 자점(도업)<br/>
+            直口杯成分,加工工艺<br/>
+            Zhi kou bei cheng fen, jia gong gong yi<br/>
+            직구 잔(집)성분,가공공예<br/>
+            直口杯 (紅) 成分:紅視原可(分布在宜兴的黃龙山),氧化铁,高的主,石英等<br/>
+            Zhi kou bei (hong) cheng fen: hong ni yuan kuang (fen bu zai yi xing de huang long shan),<br/>
+            yang hua tie, gao ling tu, shi ying deng<br/>
+            직구간(홍색)성분:니원광의흥시황릉산에분포),양화철,고령토석영 등<br/>
+            生工开果一民化两年加工堤陶瓷→全手工制作一一周- Sheng chan gong yi kai cai-feng hua liang nian jia gong ti<br/>
+            lian cheng tao ci→ quan shou gong zhi zuo yin zan yi zhou<br/>
+            제조공정도 개통화이후도자기수용으로제작진주동안 건조<br/>
+            拱干进宿一溫度1300氏度36小时后冷置一出一<br/>
+            Hongganjin yaowen du1300he shi du 36 xino shi hou<br/>
+            long zhi<br/>
+            chu chang<br/>
             다시 바람에건조시킨후요가마에넣는다)온도1300씨도로36시간후냉치고
           </div>
           <div className="font-bold text-lg py-2">관련 증명서</div>

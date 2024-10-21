@@ -1,10 +1,11 @@
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import PageLayout from '../../layouts/PageLayout'
 import Popup from '../../components/containers/Popup'
 import { useState } from 'react'
 
 export default function Purchase () {
   const location = useLocation()
+  const { id } = useParams()
   const { title } = location.state || {}
   const [ isOpen, setIsOpen ] = useState<boolean>( false )
   const [ popupProps, setPopupProps ] = useState<Record<string, any>>( {} )
@@ -25,7 +26,7 @@ export default function Purchase () {
             <div className="mr-3 w-80">
               <div className="item">
                 <img
-                  src={ `/image/coffee_1.png` }
+                  src={ `/image/${ id }.png` }
                   className="w-full h-44 object-cover rounded-xl"
                 />
               </div>

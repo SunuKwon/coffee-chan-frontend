@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.1.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@mdi/font": "^7.2.96",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.2",
@@ -14,7 +16,8 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "6",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

@@ -1,4 +1,3 @@
-import MainLayout from './layouts/MainLayout/index.tsx'
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { routes } from './pages/router'
@@ -39,13 +38,13 @@ function App () {
   const [ router ] = useState( getBrowserRouter( routes ) )
 
   return (
-    <MainLayout>
-      <div className="app w-full flex-1 flex justify-center overflow-y-scroll">
+    <>
+      <div className="app w-full h-full justify-center">
         <RouterProvider router={ router }/>
       </div>
       <div className="modal">
       </div>
-    </MainLayout>
+    </>
   )
 }
 

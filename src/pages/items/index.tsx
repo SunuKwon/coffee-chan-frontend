@@ -1,14 +1,13 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import PageLayout from '../../layouts/PageLayout'
-import { items } from '../../store/items.ts'
+import { items, models } from '../../store'
 import Popup from '../../components/containers/Popup'
 
 export default function Items () {
   const { id } = useParams()
   const [ title, setTitle ] = useState<string>()
   const [ isOpen, setIsOpen ] = useState<boolean>( false )
-  const [ itemCount, setItemCount ] = useState<number>()
   const [ selectItem, setSelectItem ] = useState<number | undefined>( undefined )
   const [ description, setDescription ] = useState<string>()
 
@@ -18,12 +17,6 @@ export default function Items () {
     setTitle( items.find( ( _, idx ) => id === String( idx ) )?.name )
     setDescription( `(${ Number( id ) % 2 === 1 ? 3 : 0 })` )
   }, [] )
-
-  const models = [
-    { name: 'GI-CS001' },
-    { name: 'GI-CS002' },
-    { name: 'GI-CS003' },
-  ]
 
   return (
     <>
